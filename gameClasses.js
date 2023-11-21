@@ -20,12 +20,18 @@ let status = {
         1:["Warrior"],
         2:["Monk"],
         3:["Ninja"],
+    },
+    attacks:{
+        0:["Magic"],
+        1:["Sword"],
+        2:["Martial Arts"],
+        3:["Shuriken"],
     }
 };
 
 // Creating new character
 
-let player = new hero("Lucas",22, status.classes[0]);
+let player = new hero("Lucas",22, status.classes[2]);
 
 
 // Actual execution
@@ -41,22 +47,22 @@ playerAtk()
 function playerAtk(){
     if(player.type == status.classes[0]){
     
-        console.log(` ${player.type} attacked used Magic.`)
-        
+        console.log(` ${player.type} attacked using ${status.attacks[0]}`)
+
     }
     else if(player.type == status.classes[1]){
 
-        console.log(` ${player.type} attacked used Sword.`)
+        console.log(` ${player.type} attacked using ${status.attacks[1]}`)
 
     }
     else if(player.type == status.classes[2]){
 
-        console.log(` ${player.type} attacked used Martial Arts.`)
+        console.log(` ${player.type} attacked using ${status.attacks[2]}`)
 
     }
     else if(player.type == status.classes[3]){
 
-        console.log(` ${player.type} attacked used Shuriken.`)
+        console.log(` ${player.type} attacked using ${status.attacks[3]}`)
 
     }
     
